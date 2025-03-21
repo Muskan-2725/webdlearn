@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>internal styling of our document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- <style>
+        @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&display=swap');
+        p{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-style:italic;
+            font-weight:400;/*can be used to bold the text*/
+            text-decoration:underline ;
+            text-align: left;
+        }
+        div{
+            /* font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif */
+            font-family: "Big Shoulders Stencil", sans-serif;
+            font-size:20px;
+            line-height:1.5;/*gap between the two lines*/
+            letter-spacing:1px;
+            width:700px;
+        }
+         /* .lorem{
+            border:2px solid blue;
+            width:49px;
+            text-overflow:ellipsis;   
+            overflow:hidden;
+            word-break:break-all;
+        }  */
+        .print{
+            text-transform:uppercase;
+            text-decoration:underline;
+            text-decoration-color:aquamarine;
+            text-decoration-style: dotted;
+            text-decoration-thickness: 2px;
+            text-indent:10px;
+        }
+        .paint{
+            /*color:pink;*/
+            /*color:#0BEE0B*/
+            /*color:rgb(121, 59, 69)*/
+            /*color:rgba(123, 212, 197, 0.75)*/
+            color:hsl(200, 60%, 70%)
+            /*similar is for background color*/
+        }
+     </style> -->
+    <style>
+        * {
+            margin: 5px;
+            padding: 2px;
+           
+        }
+
+        .mantian {
+            /*box-sizing: border-box;
+             border: 2px solid black;
+            width: 80vw */
+                /*view weight - total weidth that could be seen on the screen or site*/
+            
+            /* min-height: 20vh; */
+            /* height:50vh; */
+            font-size: 20px;
+            /* margin: 0px auto; */
+            /* first is considered to be vertical distance margin and (auto) next one is considered to be horizontal margin*/
+            /* background-color: aqua; */
+        }
+
+        /* .mantian p{
+            font-size:2rem;
+        } */
+        .box {
+            border: 2px solid blue;
+            /* display:block; */
+            padding :10px;
+            margin:20px;
+            outline:2px solid red;
+            outline-offset:2px;
+            border-radius:5px;/*outline adjusts itself*/
+            /* width:300px; */
+        }
+        .box1{
+            /* display:none; */
+            /* visibility:hidden */
+            /* display:inline-flex;
+            justify-content:center; */
+            border:2px solid blueviolet;
+            box-shadow: 5px 5px 5px 2px #93e688 ;/* h-offset, v-offset,blur,spread,color,inset*/
+        }
+        p{
+            text-shadow: 5px 5px 3px #3c95d9;
+            border:2px solid black;
+            height:20vh;
+            width:5vw;
+            overflow-x:hidden;
+            overflow-y:scroll
+            /* overflow:scroll;
+            white-space:nowrap;
+            here in overflow we can also use auto for safe place as it adds scroll if needed otherwise none */
+
+        }
+        nav ul li{
+            list-style:circle;
+            display:inline-flex;
+            /* background-color:aquamarine;
+            list-style-position:inside;
+            list-style-type:"😜"; */
+            /* list-style-image: url(https://cdn.britannica.com/88/137188-050-8C779D64/Boston-Public-Garden.jpg); */
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>home</li>
+            <li>content</li>
+            <li>history</li>
+        </ul>
+    </nav>
+    <div class="mantian">
+        this is a new style of maintaining
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore cumque officiis architecto ipsum nesciunt,
+            quisquam temporibus vitae consequatur adipisci esse quidem distinctio accusamus est error, rerum
+            consequuntur commodi. Incidunt officiis sed perspiciatis quam. Inventore repellat quae aspernatur
+            voluptatibus repudiandae temporibus earum aut quam et nisi sunt possimus, eius reprehenderit placeat.
+        </p>
+    </div>
+    <div class="boxes">
+    <div class="box box1">i am a box</div>
+    <div class="box "> and also a nice box</div> 
+    <div class="box "> and also a nice box</div>
+</div> <!--to convert block 
+    element into inline element  -->
+    <!-- <main>
+        <p>
+            i am first child
+        </p>
+        <p>
+            i am second child
+        </p>
+    </main>
+    <div class="lorem">
+        hi .. I am here
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, inventore temporibus sed dolores laudantium velit odit adipisci officia dolorum laborum dignissimos reiciendis vero impedit quo suscipit, dolore aperiam atque delectus, autem veritatis at voluptas? Libero omnis sequi nesciunt dolore eligendi?
+        <p>
+            i am paraa under div
+        </p>
+        <article>
+            <p>i am para under article under div</p>
+        </article>
+    </div>
+    <div class="print">
+        how are you
+    </div>
+    <div id="person">
+        i am fine
+    </div>
+    <a href="https://www.google.com">open google</a>
+    <a href="https://www.facebook.com" target="_blank">go to facebook</a>
+    <p class="paint">
+        color can be represented in following ways:
+        <ol type="i">
+            <li>color keyword</li>
+            <li>hex color code</li>
+            <li>rbg</li>
+            <li>rbga</li>
+            <li>hsl</li>
+        </ol>
+
+    </p> -->
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bounce ball</title>
+    <style>
+        .container{
+            width:70vw;
+            height:70vh;
+            background-color: rgb(164, 191, 215);
+            display:flex;
+            align-items:end;
+        }
+        .ball{
+            background-color: rgb(213, 59, 59);
+            border-radius:70px;
+            width:50px;
+            height:50px;
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            animation: bounce 4s cubic-bezier(0.39, 0.43, 0.44, 0.66) 1s 2 alternate;
+    
+        }
+        @keyframes bounce{
+            0%{}
+            10%{transform:translateX(100px) translateY(-200px) rotate(50deg)}
+            20%{transform:translateX(200px) translateY(0px) rotate(100deg)}
+            30%{transform:translateX(300px) translateY(-170px) rotate(150deg)}
+            40%{transform:translateX(400px) translateY(0px) rotate(200deg)}
+            50%{transform:translateX(500px) translateY(-150px) rotate(250deg)}
+            60%{transform:translateX(600px) translateY(0px) rotate(300deg)}
+            70%{transform:translateX(700px) translateY(-130px) rotate(350deg)}
+            80%{transform:translateX(800px) translateY(0px) rotate(400deg)}
+            90%{transform:translateX(900px) translateY(-110px) rotate(450deg)}
+            100%{transform:translateX(970px) translateY(0px) rotate(500deg)}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ball">ball</div>
+    </div>
+</body>
+</html>
