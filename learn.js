@@ -79,3 +79,21 @@ console.table([id,name,roll,clg,add]);*/
 // console.log(null>=0)
 // //strict comparison (===) also checks for datatypes
 // console.log("2"===2)
+
+//**********summary**********
+// //primitive datatypes
+// 7 types : Number, String , Boolean, null,undefined, Symbol(unique),BigInt
+// const id=Symbol('123')
+// const idsaves=Symbol('123')
+// console.log(id===idsaves)//returns false
+// const bignum=2874691485035n//BigInt :apply n at end 
+// //refrence (non-primitive)
+// Array, Object, Function
+// const heroes=["shaktiman","nagraj"]
+// let myobj={
+//     name:"muskan",
+//     roll:23,
+// }
+// const myfunc= function(){
+//     console.log("hello world");
+// }
