@@ -97,3 +97,60 @@ console.table([id,name,roll,clg,add]);*/
 // const myfunc= function(){
 //     console.log("hello world");
 // }
+
+//++++++++memory++++++
+// // Stack(primitive),heap (non-prmitive)
+// let name="muskan"
+// let anothername=name
+// anothername="mukul"
+// console.log(anothername)
+// console.log(name)
+
+// let detail1={
+//     id:"12434",
+//     email:"muskan@gmail.com"
+// }
+// let detail2=detail1
+// detail2.email="garg@gmail"
+// console.log(detail1.email)
+// console.log(detail2.email)
+
+
+//=================strings==================
+// let str1 = "hello"
+// let str2 = "muskan"
+// console.log(str1+" "+str2);//not a good practice using +
+// console.log(`${str1} ! this is ${str2}`)
+// //another method :defeines it as a string only
+// const gamename=new String("game Knockout kick")
+// console.log(gamename)
+// console.log(gamename[0])
+// console.log(gamename.__proto__)
+// console.log(gamename.length)
+// console.log(gamename.substring(1,5))
+// console.log(gamename.slice(-6,5))//can even use negative indexing from back
+// console.log(gamename.charAt(3))
+// console.log(gamename.indexOf('n'))
+// console.log(gamename.toUpperCase())
+// console.log(gamename.toLowerCase())
+// console.log(gamename.toString())
+
+// const newstring="    muskan   "
+// console.log(newstring.trim())
+// const url="https://oenvn/nnvo%20jnnc"
+// console.log(url.replace('%20','-'))
+// console.log(url.includes('oen'))
+// console.log(url.includes('oend'))
+// console.log(gamename.split(' '))
+
+
+//----------------numbers & maths----------------
+const score=400
+console.log(score)
+const balance =new Number(100.2879)
+console.log(balance)
+console.log(balance.toString().length)
+console.log(balance.toFixed(2))
+console.log(balance.toPrecision(4))
+const anothernum=1000000
+console.log(anothernum.toLocaleString('en-IN'))
