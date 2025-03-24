@@ -222,3 +222,20 @@ console.table([id,name,roll,clg,add]);*/
 // console.log("B ",newarr)
 // console.log(newarr.splice(1,4)) // takes out the ranges index element from the array
 // console.log("C ",newarr)
+
+//++++++++++++++++ updation of array ++++++++++++++++
+// const names=["muskan","amrita","aditya","shreya"]
+// const surnames=["garg","yadav","singla","mittal"]
+// console.log(names.push(surnames)) //creates an array in array
+// const fullname=names.concat(surnames) //instead can use concate
+// console.log(fullname)
+// const full_name=[...names,...surnames]//has advantage over concate that can spread up more than two array also
+// console.log(full_name)
+// const arr=[1,2,3,[4,5,6],5,6,[7,[8,9]]]
+// console.log(arr.flat(Infinity))//to convert the above complex array into single layer aray
+// Array.isArray("muskan")
+// console.log(Array.from("muskan"))
+// let score1=100
+// let score2=200
+// let score3=300
+// console.log(Array.of(score1,score2,score3))
