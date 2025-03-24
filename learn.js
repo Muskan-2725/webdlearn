@@ -174,4 +174,51 @@ console.table([id,name,roll,clg,add]);*/
 // console.log(Math.LOG10E)
 
 
-//
+//---------------date & time----------------
+// const  mydate=new Date()
+// console.log(mydate)
+// console.log(typeof mydate)
+// console.log(mydate.toString())
+// console.log(mydate.toLocaleString())
+// console.log(mydate.toLocaleDateString())
+// console.log(mydate.toLocaleTimeString())
+// let anotherdate=new Date("2025-07-02")
+// let newdate=new Date("07-02-2024")
+// console.log(anotherdate.toString())
+// console.log(newdate.toString())
+// let timestamp=Date.now()
+// console.log(timestamp)
+// console.log(mydate.getTime())
+// console.log(Math.floor(Date.now()/1000)) // in seconds
+// let newday=mydate.toLocaleString('en-IN',{
+//     weekday: "long",
+//     month:'short',
+//     year:'numeric',
+//     day:'numeric',
+// })
+// console.log(newday)
+
+
+//--------Array--------
+// const myarr=[1,2,3,4,5] //elements can even be of mix datatypes
+// console.log(myarr)
+// const arr=new Array(0,1,2,3,4,5)
+// console.log(myarr[3])
+// console.log(arr)
+// arr.push(6)
+// arr.push(7)
+// arr.pop()
+// console.log(arr)
+// arr.unshift(9)
+// arr.shift()
+// console.log(arr)
+// console.log(arr.includes(9))
+// console.log(arr.indexOf(4))
+// console.log(arr.join()) // converts into string with elements separated with commas
+// console.log(typeof arr.join())
+// const newarr= new Array(2,7,2,5,3,1,8,2,3)
+// console.log("A ",newarr)
+// console.log(newarr.slice(1,4))
+// console.log("B ",newarr)
+// console.log(newarr.splice(1,4)) // takes out the ranges index element from the array
+// console.log("C ",newarr)
