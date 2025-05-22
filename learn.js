@@ -345,7 +345,7 @@ console.table([id,name,roll,clg,add]);*/
 
 
 
-//-----------functions---------
+//-------------------------------functions---------------------------------
 // function letter(){
 //     console.log('M')
 //     console.log('u')
@@ -412,3 +412,47 @@ console.table([id,name,roll,clg,add]);*/
 // }
 // console.log(handlearr(arr))
 // console.log(handlearr([300,800,100]))
+
+
+//-----------scope,arrow,this--------------
+//for scope it is either local or global
+// const myobj={
+//     name:"muskan",
+//     id:"687gm",
+//     loginfunc:function(){
+//         console.log(this.name);
+//         return `${myobj.name} logged in`
+//     }
+// }
+// console.log(myobj)
+// myobj.loginfunc()
+// console.log(this); //returns an empty object
+// function myfunc(){
+//     let username="muskan"
+//     console.log(this)
+// }
+// myfunc()
+// 
+// const myfunc = ()=>{
+//     let username="muskan";
+//     console.log(this.username);
+//     console.log(this);
+// }
+// myfunc()
+//  const addtwo=(num1,num2)=> {
+//     return num1+num2;
+//  }
+//  console.log(addtwo(8,7))
+// const addtwo=(num1,num2)=> (num1+num2) //implicit return in parenthesis
+// const addtwo=(num1,num2)=> ({username:"muskan"})
+// console.log(addtwo(6,3))
+
+
+//--------Immediately Invokd Function Expression(IIFE)-----------
+// (function chai(){
+//     //named IIFE
+//     console.log(`loggedin`)
+// })();//';' is required to define the end else it will show error
+// ((name)=>{
+//     console.log(`member is logged in ${name}`)
+// })("muskan")
