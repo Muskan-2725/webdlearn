@@ -472,3 +472,4 @@ console.table([id,name,roll,clg,add]);*/
 // const add= function(num) {
 //     return num+2
 // }
+// we should take care of the scopes 
