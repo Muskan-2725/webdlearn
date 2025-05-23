@@ -505,3 +505,16 @@ console.table([id,name,roll,clg,add]);*/
 // const user=()=>({username:"muskan"})
 // console.log(AddTwo(5,7))
 // console.log(user()) 
+
+
+// //----------IIFE(immediately invoked function expression)-----------
+// // functions that can be invoked directly as and when declared to avoid global polution
+// //named iife
+// (function user(name){
+//     console.log("username:muskan")
+// })();
+// //";" is required between these two functions 
+// //unnamed 
+// ((names)=>{
+//     console.log("hello! everyone ",names)
+// })("rahul")
