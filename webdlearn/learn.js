@@ -473,3 +473,35 @@ console.table([id,name,roll,clg,add]);*/
 //     return num+2
 // }
 // we should take care of the scopes 
+
+
+//--------------this, arrow function----------------
+//in browser generally global object is windows 
+// const obj={
+//     username:"muskan",
+//     password:"******",
+//     message :function() {
+//         console.log(`${this.username}, hello welcome here`);
+//         console.log(this)
+//     }
+// }
+// obj.message();
+// obj.username="mukul"
+// obj.message();
+// console.log(this) // returns {} as there is no global object 
+// function user(){
+//     let username="muskan";
+//     console.log(this) // has no purpose to be used in function 
+// }
+// user()
+// //arrow function
+// //explicitly
+// const addtwo=(num1,num2)=>{
+//     return num1+num2
+// }
+// console.log(addtwo(3,5))
+// //implicitly
+// const AddTwo=(num1,num2)=>(num1+num2)//parenthesis are used for implicit return
+// const user=()=>({username:"muskan"})
+// console.log(AddTwo(5,7))
+// console.log(user()) 
