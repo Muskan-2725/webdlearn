@@ -601,6 +601,8 @@ console.table([id,name,roll,clg,add]);*/
 //     console.log("user succesfully created an account")
 // }
 // //other operators are &&(and) ,||(or).
+
+
 // //switch case: structure
 // // switch (key) {
 // //     case value:
@@ -661,6 +663,8 @@ console.table([id,name,roll,clg,add]);*/
 // if(Object.keys(useremail).length===0){
 //     console.log("it is an empty object")
 // }
+
+
 // //nullish coalescing operator: null or undefined
 // //here gets the right value if the left value is null or undefined else gets the left value
 // let sum= 5??10;
@@ -673,46 +677,68 @@ console.table([id,name,roll,clg,add]);*/
 // //condition ? true:false
 // let carry=20;
 // carry<10 ? console.log("less than 10"):console.log("greater than 10");
-//iterations
-for (let i = 0; i < 10; i++) {
-    const element = i;
-    if(element == 5){
-        console.log("value is equal to 5")
-    }
-    console.log(element)
-}
-//nested loops
-for (let i = 0; i < 10; i++) {
-    console.log(`outer loop : ${i}`)
-    for (let j = 0; j < 5; j++) {
-        console.log(`inner loop : ${j}`)  
-    }
-}
-for (let i = 0; i < 10; i++) {
-    console.log(`outer loop : ${i}`)
-    for (let j = 0; j < 5; j++) {
-        console.log(i+"*"+j+"="+i*j);  
-    }
-}
-let myarray=["batman","superman","spiderman"]
-for (let index = 0; index < myarray.length; index++) {
-    const element = myarray[index];
-    console.log(element)
-}
-//break and continue
-for (let index = 1; index < 20; index++) {
-    if(index==5){
-        console.log("detected number 5");
-        break;
-    }
-    console.log(`value of element is ${index}`)
+
+
+// //iterations
+// for (let i = 0; i < 10; i++) {
+//     const element = i;
+//     if(element == 5){
+//         console.log("value is equal to 5")
+//     }
+//     console.log(element)
+// }
+// //nested loops
+// for (let i = 0; i < 10; i++) {
+//     console.log(`outer loop : ${i}`)
+//     for (let j = 0; j < 5; j++) {
+//         console.log(`inner loop : ${j}`)  
+//     }
+// }
+// for (let i = 0; i < 10; i++) {
+//     console.log(`outer loop : ${i}`)
+//     for (let j = 0; j < 5; j++) {
+//         console.log(i+"*"+j+"="+i*j);  
+//     }
+// }
+// let myarray=["batman","superman","spiderman"]
+// for (let index = 0; index < myarray.length; index++) {
+//     const element = myarray[index];
+//     console.log(element)
+// }
+// //break and continue
+// for (let index = 1; index < 20; index++) {
+//     if(index==5){
+//         console.log("detected number 5");
+//         break;
+//     }
+//     console.log(`value of element is ${index}`)
     
-}
-for (let index = 1; index < 20; index++) {
-    if(index==5){
-        console.log("detected number 5");
-        continue;
-    }
-    console.log(`value of element is ${index}`)
+// }
+// for (let index = 1; index < 20; index++) {
+//     if(index==5){
+//         console.log("detected number 5");
+//         continue;
+//     }
+//     console.log(`value of element is ${index}`)
     
-}
+// }
+
+
+// //while loop
+// let i=0;
+// while (i<=10) {
+//     console.log(`value of i is : ${i}`)
+//     i=i+2
+// }
+// const myarray=["muskan","mukul","rohan","ram"]
+// let arr=0
+// while (arr<myarray.length) {
+//     console.log(`vaule at index ${arr} is ${myarray[arr]}`)
+//     arr++
+// }
+// //do while loop
+// let score=10
+// do {
+//     console.log(`score is ${score}`)
+//     score--;
+// } while (score>10);
