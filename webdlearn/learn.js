@@ -742,3 +742,95 @@ console.table([id,name,roll,clg,add]);*/
 //     console.log(`score is ${score}`)
 //     score--;
 // } while (score>10);
+
+// // ARRAY  loops
+// //for of 
+// let countries=["india","britain","america","finland"]
+// for (const ele of countries) {
+//     console.log(ele)
+// }
+// //can also use it for strings as well
+// let user="hello world"
+// for(const ele of user){
+//     console.log(ele)
+// }
+// //new datatype maps :works in key value pair with unique items
+// let map=new Map();
+// map.set('IN','india')
+// map.set('USA','united states of america')
+// map.set('FR','france')
+// console.log(map)
+// for(const key of map){
+//     console.log(key)
+// }
+// for(const [key, value] of map){
+//     console.log(key,":-",value)
+// }
+// //on objects
+// // let obj={
+// //     game1:"nfs",
+// //     game2:"ycity"
+// // }
+// // for (const [key,value] of obj) {
+// //     console.log(key,":-",value)
+// // }
+// //it returns an error . so this doesn't work for an object
+
+// //therfore we have another 'for in' statement
+// let myobject={
+//     js:"javaascript",
+//     cpp:"C++",
+//     rb:"ruby"
+// }
+// for (const key in myobject) {
+//     console.log(`${key} is shortcut for ${myobject[key]}`)
+// }
+// //'for in ' in arrays
+// let arr=['programming','python','c++']
+// for (const key in arr) {
+//     console.log(key)//it prints the indeces 
+//     console.log(arr[key])//this results in values 
+// }
+// //'for in' on maps :as maps are not iteratble therefore can't apply on it
+// let map=new Map();
+// map.set('IN','india')
+// map.set('USA','united states of america')
+// map.set('FR','france')
+// for (const key in map) {
+//     console.log(key)
+// }
+
+// //'for each' loop:higher order
+// let coding=["js","cpp","python","java"]
+// coding.forEach( function(val) {//it is a call back funtion so doesn't require name
+//     console.log(val)
+// } );
+// coding.forEach( (val)=>{
+//     console.log(val)
+// } );
+
+// function PrintMe(item){
+//     console.log(item)
+// }
+// coding.forEach(PrintMe)//just need to provide the refrence no need to call the function 
+// coding.forEach( function (val , index, arr) {
+//     console.log(val, index, arr)
+// })
+
+// let mycoding=[
+//     {
+//         language:"javascript",
+//         languagefilename:"js"
+//     },
+//     {
+//         language:"python",
+//         languagefilename:""
+//     },
+//     {
+//         language:"java",
+//         languagefilename:"java"
+//     }
+// ]
+// mycoding.forEach( function (item){
+//     console.log(item.language)
+// } )
