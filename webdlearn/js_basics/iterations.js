@@ -135,7 +135,7 @@ coding.forEach(PrintMe)//just need to provide the refrence no need to call the f
 coding.forEach( function (val , index, arr) {
     console.log(val, index, arr)
 })
-
+//for each doesn't return anything even if we use return statement 
 let mycoding=[
     {
         language:"javascript",

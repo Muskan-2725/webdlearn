@@ -79,3 +79,20 @@ var fil=myArray.filter(function(element) {
     return element%2==0;
 });
 console.log(mul,fil);
+
+
+let mynums=[1,2,3,4,5,6,7,8,9]
+let newnums=mynums.filter( (num)=> num>5)
+console.log(newnums)
+//these functions return an output unlike 'for each'
+//using for each
+let newnums2=[];
+mynums.forEach( (num)=>{
+    if(num>5){
+        newnums2.push(num);
+    }
+})
+console.log(newnums2)
+//mixture
+newnums=mynums.map((num)=> num*10).map((num)=> num+3).filter((val)=> val>40)
+console.log(newnums)
