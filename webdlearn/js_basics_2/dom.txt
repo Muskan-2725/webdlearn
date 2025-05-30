@@ -1,0 +1,81 @@
+working in the 1_DOM.html using inspect 
+command:console.log(document)
+output:VM1539:1 #document (http://127.0.0.1:5500/js_basics_2/1_DOM.html)
+                <!DOCTYPE html>
+                <html lang=​"en">
+                ​<head>​…​</head>
+                ​<body>​…​</body>​</html>​
+
+command:document.getElementById('title')
+output:<h1 id=​"title" class=​"heading">​DOM learning​</h1>​
+
+command:document.getElementById('title').id
+output:'title'
+
+command:document.getElementById('title').class
+output:undefined
+
+command:document.getElementById('title').className
+output:'heading'
+
+command:document.getElementById('title').getAttribute('class')
+output:'heading'
+
+command:document.getElementById('title').setAttribute('class','test heading')
+output:undefined   // but it updates the class in the element section
+
+command:const title=document.getElementById('title')
+output:undefined
+command:title
+output:<h1 id=​"title" class=​"heading">​DOM learning​</h1>​
+
+command:title.style.backgroundColor='green'
+output:'green'
+command:title.style.padding='15px'
+output:'15px'
+command:title.style.border='3px solid red'
+output:'3px solid red'
+
+command:title.textContent
+output:'DOM learning'
+command:title.innerText
+output:'DOM learning'
+command:title.innerHTML
+output:'DOM learning'
+//seems like these three are same but there is some difference
+command:title.innerText
+output:'DOM learning'
+command:title.textContent
+output:'DOM learningtest text'
+//when added span style:display=none then there comes the difference 
+//textContent:shows all the content irrespective of visible or not
+command:title.innerHTML
+output:'DOM learning<span style="display:none">test text</span>'
+//innerHTML: supports inner tags too
+
+command:document.getElementsByClassName('heading')
+output:HTMLCollection [h1#title.heading, title: h1#title.heading]
+
+command:document.querySelector('h1')
+output:<h1 id=​"title" class=​"heading">
+        ​"DOM learning"
+        <span style=​"display:​none">​test text​</span>​
+        </h1>​
+command:document.querySelector('h2')
+output:<h2>​Lorem ipsum dolor sit amet​</h2>​
+//this returns the first query of the selector 
+//for id
+command:document.querySelector('#title')
+output:<h1 id=​"title" class=​"heading">
+        ​"DOM learning"
+        <span style=​"display:​none">​test text​</span>
+        ​</h1>​
+//for class
+command:document.querySelector('.heading')
+output:<h1 id=​"title" class=​"heading">
+        ​"DOM learning"
+        <span style=​"display:​none">​test text​</span>​
+        </h1>​
+command:document.querySelector('input[type="password"]')
+output:<input type=​"password" name=​"password" id=​"password">​
+//can have any selector supported by class
