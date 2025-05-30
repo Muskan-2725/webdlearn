@@ -79,3 +79,65 @@ output:<h1 id=​"title" class=​"heading">
 command:document.querySelector('input[type="password"]')
 output:<input type=​"password" name=​"password" id=​"password">​
 //can have any selector supported by class
+
+//if we add on list and wants to apply style on the first <li>
+command:document.querySelector('ul')
+output:<ul>
+        ​<li>​…​</li>
+        ​<li>​…​</li>
+        ​<li>​…​</li>
+        ​</ul>​
+command:const list=document.querySelector('ul')
+output:undefined
+command:const turngreen=list.querySelector('li')
+output:undefined
+command:turngreen.style.backgroundColor='green'
+output:'green'
+//or
+command:document.querySelector('ul').querySelector('li').style.backgroundColor='lightgreen'
+output:'lightgreen'
+
+//wants to change the content
+command:const ele=document.querySelector('ul').querySelector('li')
+output:undefined
+command:ele
+output:<li style=​"background-color:​ lightgreen;​">​…​</li>​::marker​"five"</li>​
+command:ele.innerText='five'
+output:'five'
+
+//using querySelectorAll
+//nodeList(collection of element rather than a single element):can work over loops
+command:const templilist=document.querySelectorAll('li')
+output:undefined
+command:templilist
+output:NodeList(3) [li, li, li]
+   ERROR:     command:templilist.style.color='red'
+              output:VM2084:1 Uncaught TypeError: Cannot set properties of undefined (setting 'color')
+                    at <anonymous>:1:23
+                    (anonymous) @ VM2084:1
+command:templilist[0].style.color='red'
+output:'red'
+command:templilist.forEach((l)=>{
+    l.style.backgroundColor='cyan';
+})
+output:undefined // turns all the <li> backgroundColor to cyan 
+
+//html collection different from array : therefore need to convert to array to work over loop
+command:document.getElementsByClassName('list-item')
+output:HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+command:const tempclasslist=document.getElementsByClassName('list-item')
+output:undefined
+ ERROR: command:tempclasslist.forEach(function(li) {
+                    console.log(li);
+                })
+        output:VM3306:1 Uncaught TypeError: tempclasslist.forEach is not a function
+                at <anonymous>:1:15
+            (anonymous) @ VM3306:1
+command:const myarr=Array.from(tempclasslist)
+output:undefined
+command:myarr
+output:(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+command:myarr.forEach(function(li) {
+    li.style.color='blue';
+})
+output:undefined  // turns blue
