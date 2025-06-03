@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            background-color:rgb(207, 207, 207);
+            display:flex;
+            justify-content: center;
+            margin-left: 0px;
+            gap:10px;
+        }
+        a{
+            border:2px solid black;
+            border-radius:8px;
+            background-color: rgb(145, 140, 140);
+            color:black;
+            padding:5px 30px;
+            margin:5px;
+        }
+        body{
+            background-color: rgb(56, 54, 54);
+            margin:0px;
+        }
+        .container{
+            display:flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items: center;
+            gap:10px;
+            height:90vh;
+        }
+        .clock{
+            background-color: rgb(181, 150, 12);
+            width:100px;
+            height:40px;
+            border-radius: 10px;
+            /* text-align: center; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .banner{
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="home.html">projects</a>
+    </nav>
+    <div class="container">
+        <div class="banner"><span>Your Local Time</span></div>
+        <div class="clock"></div>
+    </div>
+    <script>
+        const clock=document.querySelector('.clock');
+        setInterval(function(){
+            let date =new Date();
+            clock.innerHTML=date.toLocaleTimeString()
+        },1000)//contains two parameters one:function 2nd:miliseconds after which needs to update
+    </script>
+</body>
+</html>
