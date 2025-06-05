@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Random color example — event handler attribute</title>
+    
+  </head>
+  <body style="background-color:#414141; color:aliceblue">
+    <h2>EVENTS NOTES</h2>
+    <div>
+      <ul id="images">
+        <li><img width="400px" id="event" src="EVENTS.png" alt="event"></li>
+        <li><img width="400px" id="target" src="target.png" alt="target"></li>
+        <li><img width="400px" id="eventobj" src="event_objects.png" alt="obj"></li>
+        <li><img width="400px" id="bubling" src="event_bubling.png" alt="bubling"></li>
+        <li><img width="400px" id="delegation" src="event_delegation.png" alt="delegation" ></li>
+        <!-- <li><img width="400px" id="delegation" src="event_delegation.png" alt="delegation" onclick="alert('clicked delagation')"></li> -->
+        <li><a href="https://www.google.com" style="color:rgb(221, 252, 252)" id="google">google</a></li>
+      </ul>
+
+    </div>
+    <script>
+    //   document.getElementById('delegation').onclick= function() {
+    //     alert("clicked delagation notes")
+    //   }
+      //were used earlier
+      //attachEvent()
+      //jQuery() - on
+
+    //   document.getElementById('images').addEventListener('click',function(){
+    //     console.log("clicked notes in images")
+    //   },false);
+    //   document.getElementById('delegation').addEventListener('click',function(e){
+    //     console.log("clicked notes:delegation");
+    //     e.stopPropagation();
+    //   },false);
+    //   document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     console.log("clicked google")
+    //   })
+    document.getElementById('images').addEventListener('click',function(e){
+        console.log(e.target.tagName);
+        if(e.target.tagName==="IMG"){
+            let removeit = e.target.parentNode;
+            removeit.remove();
+        }
+    })
+    //removeit.parentNode.removeChild(removeit)
+    </script>
+  </body>
+</html>

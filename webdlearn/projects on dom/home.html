@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
         nav{
             background-color:rgb(207, 207, 207);
             display:flex;
@@ -23,13 +25,19 @@
             margin:0px;
         }
         .project{
-            background-color: white;
+            background-color: rgb(225, 221, 221);
             border:2px solid black;
             border-radius: 8px;
         }
         .container{
             display: flex;
             flex-direction: column;
+        }
+        h1{
+            margin:12px;
+            /* color: white; */
+            /* font-family: "Big Shoulders Stencil", sans-serif; */
+            font-family: "Creepster", system-ui;;
         }
     </style>
 </head>
@@ -38,7 +46,7 @@
         <a href="home.html">Home</a>
         <a href="#container">projects</a>
     </nav>
-    <h2>Our Projects</h2>
+    <h1>MY PROJECTS </h1>
     <div class="container" id="container">
         <a href="project_01.html" class="project" id="one">Project One:Color Changer 🔥</a>
         <a href="project_02.html" class="project" id="two">Project two : BMI Generator 💁‍♂️</a>

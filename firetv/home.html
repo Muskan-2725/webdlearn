@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MoodMatch: Emotion-Aware Content Recommender</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>🎬 MoodMatch</h1>
+    <nav>
+      <button id="profileBtn">👤 Switch Profile</button>
+      <button id="parentalBtn">👨‍👩‍👧 Parental Controls</button>
+      <button id="accessibilityBtn">♿ Accessibility</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="mood-section">
+      <h2>Select Your Mood</h2>
+      <div class="moods">
+        <button class="mood-btn" data-mood="happy">😊 Happy</button>
+        <button class="mood-btn" data-mood="sad">😢 Sad</button>
+        <button class="mood-btn" data-mood="bored">😐 Bored</button>
+        <button class="mood-btn" data-mood="anxious">😰 Anxious</button>
+        <button class="mood-btn" data-mood="excited">🤩 Excited</button>
+      </div>
+    </section>
+
+    <section id="recommendations">
+      <h2>Recommended for You</h2>
+      <ul id="content-list"></ul>
+    </section>
+
+    <section id="mood-history">
+      <h2>Your Mood Timeline</h2>
+      <canvas id="moodChart" width="400" height="100"></canvas>
+    </section>
+
+    <section id="calendar">
+      <h2>📅 Watch Calendar</h2>
+      <input type="date" id="watchDate">
+      <button id="addWatchBtn">Add Movie Night</button>
+      <ul id="calendarList"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 MoodMatch Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
