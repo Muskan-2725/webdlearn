@@ -2,53 +2,132 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>MoodMatch: Emotion-Aware Content Recommender</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>FIRE-TV SERVICES</title>
+  <link rel="stylesheet" href="home.css">
 </head>
 <body>
-  <header>
-    <h1>🎬 MoodMatch</h1>
-    <nav>
-      <button id="profileBtn">👤 Switch Profile</button>
-      <button id="parentalBtn">👨‍👩‍👧 Parental Controls</button>
-      <button id="accessibilityBtn">♿ Accessibility</button>
-    </nav>
+  <!-- Theme Switcher -->
+  <div class="theme-switcher">
+    <label>Theme:
+      <select id="theme-select">
+        <option value="dark">Dark</option>
+        <option value="light">Light</option>
+        <option value="blue">Blue</option>
+        <option value="purple">Purple</option>
+      </select>
+    </label>
+  </div>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <ul>
+      <div><li id="profile"><img src="https://imgs.search.brave.com/snSMofaO1s3QApmKbBYSIXlrypx0eygoSIGVwgCzUWk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wNTMv/NzE1LzE4Ni9zbWFs/bC9hYnN0cmFjdC1i/bHVlLWdlb21ldHJp/Yy1odW1hbi1zaWxo/b3VldHRlLWljb24t/cmVwcmVzZW50aW5n/LWFub255bWl0eS1h/bmQtZGlnaXRhbC1w/cm9maWxlLWlzb2xh/dGVkLW9uLWEtdHJh/bnNwYXJlbnQtYmFj/a2dyb3VuZC1wbmcu/cG5n" alt="" height="30px" ><a href="#">Profile</a></li></div>
+      <div class="options">
+      <li><a href="#">Watch Rooms</a></li>
+      <li><a href="#">Preferences</a></li>
+      <li><a href="#">Calendar</a></li>
+      <li><a href="#">Settings</a></li>
+      <li><a href="#">Login</a></li>
+      <li><a href="#">Signup</a></li></div>
+    </ul>
+  </nav>
+  <!-- Header Image -->
+  <header class="header-img">
+    <div class="img-placeholder">
+      <img src="https://imgs.search.brave.com/mtehUo89MkyZS8labyS2KDgOJFVceGKbnXxLKO44vJo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vcGhvdG9z/L2ZpbG0tZnJhbWVz/LWJhY2tncm91bmQt/cGljdHVyZS1pZDEx/NTEyNDc2Mjk_az0y/MCZtPTExNTEyNDc2/Mjkmcz02MTJ4NjEy/Jnc9MCZoPWhjd3lW/RmdfTkE4SVJNOEM4/REktY1V0XzQ5VEtY/Vi1IWHc2dWhKYXkt/bFE9" alt="amazon fire tv" style="width:90vw; height:240px">
+    </div>
   </header>
-
   <main>
-    <section id="mood-section">
-      <h2>Select Your Mood</h2>
-      <div class="moods">
-        <button class="mood-btn" data-mood="happy">😊 Happy</button>
-        <button class="mood-btn" data-mood="sad">😢 Sad</button>
-        <button class="mood-btn" data-mood="bored">😐 Bored</button>
-        <button class="mood-btn" data-mood="anxious">😰 Anxious</button>
-        <button class="mood-btn" data-mood="excited">🤩 Excited</button>
+    <!-- About Section -->
+    <section class="about">
+      <h2>ABOUT</h2>
+      <p style="font-size: 12px;">
+        FireTV AI Experience is a smart, AI-powered entertainment platform that personalizes your streaming journey based on your mood, preferences, and habits. Whether you're watching alone or with family, it adapts to who's viewing, what you're feeling, and how much time you have. With features like mood-based recommendations, smart parental controls, social watch rooms, and personalized calendars, it transforms passive watching into a deeply tailored and interactive experience.
+      </p>
+    </section>
+    <!-- Mood Section -->
+    <section class="mood-section">
+      <div class="mood-row">
+        <label for="mood-select" class="mood-label">Shows you might like :</label>
+        <form id="mood-form" class="mood-form" autocomplete="off" onsubmit="return false;">
+          <select id="mood-select">
+            <option value="">choose ur mood</option>
+            <option value="happy">😊 happy</option>
+            <option value="sad">😢 sad</option>
+            <option value="energetic">⚡ energetic</option>
+            <option value="angry">🔥 angry</option>
+            <option value="love">😍 love/romantic</option>
+            <option value="lonely">😔 lonely</option>
+            <option value="chill">😎 chill</option>
+            <option value="tense">😬 tense</option>
+            <option value="thrill">🎢 thrill-seeking</option>
+            <option value="gloomy">😶‍🌫️ gloomy</option>
+          </select>
+          <button type="submit" id="mood-submit">Submit</button>
+        </form>
+        <button id="spin-btn" title="Spin for random mood">
+          <div class="spin-wheel">
+            <svg viewBox="0 0 60 60" width="44" height="44">
+              <circle cx="30" cy="30" r="28" fill="#fff" stroke="#5c7cfa" stroke-width="4"/>
+              <text x="30" y="36" text-anchor="middle" font-size="22" fill="#5c7cfa" font-weight="bold">🎡</text>
+            </svg>
+          </div>
+        </button>
+      </div>
+      <div class="scroll-row" id="mood-recommendations">
+        <div class="card img-placeholder">#image<br>#clip</div>
+        <div class="card img-placeholder">#image<br>#clip</div>
+        <div class="card img-placeholder">#image<br>#clip</div>
       </div>
     </section>
-
-    <section id="recommendations">
-      <h2>Recommended for You</h2>
-      <ul id="content-list"></ul>
+    <!-- Recommendations from history -->
+    <section>
+      <h3>Recommendations from the history</h3>
+      <div class="scroll-row" id="history-recommendations">
+        <div class="card img-placeholder">#image<br>#clip</div>
+        <div class="card img-placeholder">#image<br>#clip</div>
+        <div class="card img-placeholder">#image<br>#clip</div>
+      </div>
     </section>
-
-    <section id="mood-history">
-      <h2>Your Mood Timeline</h2>
-      <canvas id="moodChart" width="400" height="100"></canvas>
+    <!-- Weekly Playlists -->
+    <section>
+      <h3>Weekly personalized Playlists:</h3>
+      <div class="playlist-row">
+        <div class="playlist-card img-placeholder">playlist</div>
+        <div class="playlist-card img-placeholder">playlist</div>
+      </div>
     </section>
-
-    <section id="calendar">
-      <h2>📅 Watch Calendar</h2>
-      <input type="date" id="watchDate">
-      <button id="addWatchBtn">Add Movie Night</button>
-      <ul id="calendarList"></ul>
+    <!-- Short Clips/Highlights -->
+    <section>
+      <h3>Short clips/highlights</h3>
+      <div class="scroll-row" id="highlights-row">
+        <div class="highlight-card img-placeholder" data-title="Highlight 1">highlight</div>
+        <div class="highlight-card img-placeholder" data-title="Highlight 2">highlight</div>
+        <div class="highlight-card img-placeholder" data-title="Highlight 3">highlight</div>
+      </div>
+    </section>
+    <!-- Contact -->
+    <section class="contact">
+      <h3>Contact Us:</h3>
+      <p style="font-size: 11px;">Email: contactus@firetv.in</p>
+      <p style="font-size: 11px;">Phone: +91-8839093998</p>
     </section>
   </main>
-
-  <footer>
-    <p>&copy; 2025 MoodMatch Project</p>
-  </footer>
-
-  <script src="script.js"></script>
+  <!-- Highlight Modal -->
+  <div id="highlight-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="close-modal">&times;</span>
+      <h4 id="modal-title">Highlight Title</h4>
+      <div class="img-placeholder" style="height:120px;">[Video/Image]</div>
+      <div class="feedback">
+        <p>Did you like this highlight?</p>
+        <button class="emoji-btn">👍</button>
+        <button class="emoji-btn">👎</button>
+        <button class="emoji-btn">😍</button>
+      </div>
+      <button id="watch-full-btn">Watch Full Movie</button>
+      <div id="movie-description">[Movie description will appear here]</div>
+    </div>
+  </div>
+  <script src="home.js"></script>
 </body>
 </html>
